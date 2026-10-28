@@ -13,7 +13,11 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'build';OUT.mkdir(exist_ok=True)
 FRAMES=OUT/'frames_30fps';FRAMES.mkdir(exist_ok=True)
 KEYS=OUT/'drawn_keys';KEYS.mkdir(exist_ok=True)
-paths=[str(p) for p in sorted((ROOT/'assets/keyframes').glob('*.png'))]
+paths=[str(p) for p in sorted((ROOT/'assets/keyframes').glob('key_*.png'))]
+if len(paths) != 8:
+    raise SystemExit('Expected 8 key drawings in assets/keyframes/.')
+if shutil.which('ffmpeg') is None:
+    raise SystemExit('FFmpeg is required. Install it and ensure it is on PATH.')
 
 def signedarea(p):
     return .5*np.sum(p[:,0]*np.roll(p[:,1],-1)-p[:,1]*np.roll(p[:,0],-1))
@@ -87,7 +91,7 @@ for feature in range(9):
     values=np.stack([p[feature] for p in allpaths]);values=np.concatenate([values,values[:1]],axis=0)
     curves.append(CubicSpline(times,values,axis=0,bc_type='periodic'))
 
-# Keep the requested central icon identical throughout the shot.
+# Extract the character silhouette; gentle float and tilt are added during rendering.
 master=Image.open(ROOT/'assets/character-source.png').convert('L')
 ma=np.asarray(master);labs,n=label(ma>100);areas=np.bincount(labs.ravel());areas[0]=0
 fid=np.argsort(areas)[::-1][1];mask=binary_dilation(labs==fid,iterations=2)

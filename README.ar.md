@@ -1,10 +1,10 @@
-# وشاح نيكا السحابي — Nika Steam Scarf
+# لوفي جير ٥ — وشاح جوي بوي السحابي
 
 [English](README.md) · **العربية**
 
 <a href="README.md"><kbd>🌐 Switch to English</kbd></a>
 
-عمل فني غير رسمي مستوحى من لوفي بالجير الخامس: لوفي يطفو بهدوء وسط إطار من وشاح السحب الأبيض، على خلفية سوداء بالكامل.
+عمل فني مستوحى من لوفي بالجير الخامس: لوفي يطفو بهدوء وسط إطار من وشاح السحب الأبيض، على خلفية سوداء بالكامل.
 
 ![معاينة متحركة](assets/animation.gif)
 
@@ -13,7 +13,7 @@
 - [الفيديو المربع — ١٠٢٤ × ١٠٢٤](assets/animation.mp4)
 - [فيديو الهاتف — ١٠٨٠ × ١٩٢٠](assets/phone.mp4)
 - [الـGIF المتحرك — ٦٤٠ × ٦٤٠](assets/animation.gif)
-- [جميع الفريمات الـ٣٠٠ بصيغة PNG](assets/frames.zip)
+- [تنزيل جميع الفريمات الـ٣٠٠ — ZIP](https://github.com/alwansan/luffy-gear-5-joyboy-one-piece/releases/download/frames/frames.zip)
 - [الصورة الثابتة](assets/preview.png)
 
 ## تفاصيل الحركة
@@ -26,8 +26,6 @@
 | اللوب | أول وآخر صورة PNG متطابقتان |
 | الألوان | أبيض وأسود |
 | الحركة | طفو وميلان خفيفان للوْفي، وحركة متأخرة لأطراف الوشاح ولفّاته |
-
-هذه هي نسخة **Lively** المعتمدة. تجربة ScarfMotion اللاحقة ذات الحركة الأقوى غير مشمولة.
 
 ## طريقة صناعة العمل
 
@@ -50,15 +48,23 @@ python scripts/render.py
 
 ستظهر النتائج داخل مجلد `build/`، وتشمل الفريمات والفيديوهين والـGIF وصورة مراحل الحركة وبيانات الفحص. البرنامج يعمل على المعالج ويحتفظ بالفريمات في الذاكرة؛ يُفضّل استخدام حاسوب لإعادة الإنتاج.
 
+## فحص ملفات العمل
+
+بعد تثبيت المكتبات وFFmpeg، شغّل:
+
+```bash
+python scripts/validate_assets.py --frames /path/to/frames.zip
+```
+
+نزّل الأرشيف من Releases أولًا واستبدل `/path/to/frames.zip` بمساره على جهازك. يمكن حذف `--frames` لفحص ملفات المستودع فقط. يفحص سلامة الأرشيف، وعدد الفريمات وأبعادها، وتطابق أول وآخر صورة، ومدة الفيديو ومعدل إطاراته، وتوقيت GIF، وبصمات الملفات في `assets/manifest.json`.
+
 ## محتويات المستودع
 
-- `assets/`: النتائج النهائية، وأرشيف الفريمات، والرسومات الأساسية، والبرومبتات وبيانات الفحص.
+- `assets/`: النتائج النهائية، والرسومات الأساسية، والبرومبتات وبيانات الفحص. أرشيف الفريمات متوفر ضمن Releases.
 - `scripts/render.py`: برنامج الإنتاج الكامل بمسارات مرتبطة بمجلد المستودع.
 - `requirements.txt`: المكتبات المطلوبة.
 - `README.md`: النسخة الإنجليزية التي تظهر افتراضيًا.
 
-## الحقوق والمراجع
+## مراجع تحريك الدخان
 
-هذا عمل معجبين غير رسمي. شخصيات One Piece ولوفي والجير الخامس تعود لأصحاب حقوقها، ومنهم إييتشيرو أودا وشويشا وتوي أنيميشن. المشروع غير تابع لهم.
-
-شملت مراجع دراسة حركة الدخان [شرح Johannes Fast](https://www.skillshare.com/en/classes/traditional-animation-how-to-create-smoke-effects/2084494770) و[درس Ribbon Smoke](https://draw.love-ink-llc.com/animatefx/BCAFXContent/BCAFX_Level-01/0103_03_Smoke.html). هي مراجع تعليمية وليست مواد طرف ثالث مضمّنة بالمستودع.
+شملت مراجع دراسة حركة الدخان [شرح Johannes Fast](https://www.skillshare.com/en/classes/traditional-animation-how-to-create-smoke-effects/2084494770) و[درس Ribbon Smoke](https://draw.love-ink-llc.com/animatefx/BCAFXContent/BCAFX_Level-01/0103_03_Smoke.html).

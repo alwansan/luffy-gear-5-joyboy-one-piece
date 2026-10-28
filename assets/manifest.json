@@ -1,0 +1,25 @@
+{
+  "files": {
+    "assets/animation.gif": "b0ac5fa7f0ac93b8a4f2b156ca1aefacbbbc2ee19cc6833871b4f93c4253b175",
+    "assets/animation.mp4": "efc10b875c079308511adfd478b5cff6ad7783970622b58f8c0511455927604e",
+    "assets/character-source.png": "019c228b2f7009bcedc50a05e70f4cceaa56283b0ffc887459015a666811ed72",
+    "assets/keyframes/key_00.png": "ee621840efe98ba55b01175cc7a7b098bca6fb6b58dc5a69b7e4d642b2c60faf",
+    "assets/keyframes/key_01.png": "cb0c46d86c4303e3f5935fde2b1c4c100cf3d16e6ad95dd3b51797ae153412df",
+    "assets/keyframes/key_02.png": "1ed06ec64034312e8aae9ba9f6b4674f400e48a8e35520a649dff4addf629ac7",
+    "assets/keyframes/key_03.png": "f7a845d60c1ab7defe9efe011a6219e1a8f7e87ca4d6cb2b98a0a13910be654b",
+    "assets/keyframes/key_04.png": "fcc869c671a5f6f1803bb155e978cc6b92ae0b7a5ec18d26ba3c74230892a22c",
+    "assets/keyframes/key_05.png": "f07a30d15b2d2594e2671b163e747c8dc67bd58a520532f0ae99e08cd4b0f8dc",
+    "assets/keyframes/key_06.png": "93cb3c466630af7cc4b2122eadcf5e68c972edc0d1d14b391ba90af2bc9ab4bb",
+    "assets/keyframes/key_07.png": "2d85f8998b47419f8f73ec6aea18f096bca2207e55b807e8a5da8b360121352f",
+    "assets/phone.mp4": "af883eda58007b5f1bdedcfee02650f15c5dd0d7b040e8a029e7073688df8aa6",
+    "assets/preview.png": "201acb1967517a5e18aec2ae377e6c485e613d14893ab7ccaaba7c3d26073af9",
+    "assets/prompts.txt": "58f001d99050646554d70b2b941d12602a69b4169ab7002926d9f653608adb30",
+    "assets/storyboard.png": "dc76c69db2d726005e28d0531aca31866e24e5549ab854a59432a988148d155c",
+    "assets/validation.json": "73257b40dffe5b8474e7a4574357224086fbd00f51d211f11930b8ba7aac15d9"
+  },
+  "frames_release": {
+    "url": "https://github.com/alwansan/luffy-gear-5-joyboy-one-piece/releases/download/frames/frames.zip",
+    "sha256": "8d3c0a829a8e4d6f466b9294be21096a52858e14591ac150a39ad25910a7ca66",
+    "size_bytes": 32915168
+  }
+}

@@ -2,3 +2,7 @@ __pycache__/
 .venv/
 build/
 JoyBoy_Lively_Complete.zip
+
+# Downloadable frame archive is hosted in Releases.
+/assets/frames.zip
+/frames.zip
